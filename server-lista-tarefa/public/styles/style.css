@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(61, 60, 60);
+}
+section{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgb(31, 165, 98);
+    border-radius: 30px; 
+    overflow: hidden;
+}
+label,button{
+    display: block;
+    font-size: 20px;
+}
+div.Insert-data{
+    width: 40%;
+    float: left;
+}
+div.data-save{
+    width: 40%;
+    float: left;
+}
+div{
+    margin: 30px;
+}
+input{
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+button{
+    border-radius: 5px;  
+    background-color: rgb(88, 131, 131);
+    color: rgb(32, 32, 32);
+    border-style: none;
+    padding: 3px;
+}
+button:hover{
+    background-color: rgb(59, 88, 88);
+    color: white;
+    transition: 1s;
+
+}
+button.excluir:hover{
+    background-color: rgb(252, 40, 40);
+    color: rgb(2, 2, 2);
+    transition: 1s;
+}
+button.excluir{
+    border-radius: 5px;  
+    color: red;
+}
+h1,h2{
+    text-align: center;
+    font-style: inherit;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.error{
+    border: 1px solid;
+    color : red;
+}
+p{
+    text-align: justify;
+}
+
+#start{
+    position: relative;
+    top: 250px;
+    background-color: rgb(0, 217, 255);
+    color: black;
+    margin: auto;
+    padding: 30px;
+}
+#start:hover{
+    background-color: rgb(47, 114, 126);
+    transition: 1s;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: bisque;
+}
+abbr{
+    text-decoration: none;
+}
+abbr:hover{
+    text-decoration: overline;
+    color: rgb(93, 180, 214);
+}
+textarea{
+    width: 323px;
+    height: 140px;
+    resize: none;
+}
+@media (min-width:420px) and (max-width: 815px) {
+    section{
+        background-color: rgb(93, 150, 184);
+    }
+    div{
+        width: 100%;
+        padding: 10px;
+    }
+    div.Insert-data{
+        width: 90%;
+    }
+    div.data-save{
+        width: 90%;
+    }
+}
+@media (max-width:419px) {
+    section{
+        background-color: rgb(184, 167, 93);
+    }
+    div{
+        width: 100%;
+        padding: 10px;
+    }
+    div.Insert-data{
+        width: 90%;
+    }
+    div.data-save{
+        width: 90%;
+    }
+}

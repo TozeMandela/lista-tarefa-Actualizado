@@ -1,0 +1,23 @@
+{
+  "name": "lista-de-tarefas",
+  "version": "1.0.0",
+  "description": "lista de tarefas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TozeMandela/lista-de-tarefas.git"
+  },
+  "author": "Mandela Jr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TozeMandela/lista-de-tarefas/issues"
+  },
+  "homepage": "https://github.com/TozeMandela/lista-de-tarefas#readme",
+  "dependencies": {
+    "mongoose": "^6.4.4",
+    "nedb": "^1.8.0"
+  }
+}

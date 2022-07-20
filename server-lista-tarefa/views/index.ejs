@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    
+    <section>
+        <h1>bem vindo</h1>
+        <div class="Insert-data">
+            <label >Nome:</label><input class="input" type="text" name="name">
+            <label >Data:</label><input class="input" type="date" name="date">
+            <label >Descrição:</label><textarea class="input" name="descricao"></textarea>
+            <button id="btn">salvar</button>
+        </div>
+        <div class="data-save">
+            <h2>Tarefas Salvas</h2>
+            <span class="span"></span>
+           
+        </div>
+    </section>
+    <footer style="text-align: center;"><a href="./sobre.html"><abbr title="autor Tozé Mandela">Mandela Jr</abbr></a></footer>
+    <script src="/model/classXHR.js"></script>
+    <script src="/model/classTarefas.js"></script>
+    <script src="/controller/controlTtarefas.js"></script>
+    <script src="/controller/mainController.js"></script>
+</body>
+</html>
