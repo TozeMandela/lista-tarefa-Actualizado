@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('mongoose');
 require('./bd');
 const tarefa = mongoose.model('lista')
 
-// base de dados connection
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+
+// base de dados connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/listaTarefas').then(()=>{
     console.log('full connection');
@@ -13,6 +19,7 @@ mongoose.connect('mongodb://localhost/listaTarefas').then(()=>{
     console.log('erro ao se conectar...',e);
 });
 
+app.use(cors());
 app.get('/users',(req, res)=>{
 
     tarefa.find().then(tarefa=>{
@@ -25,7 +32,6 @@ app.get('/users',(req, res)=>{
 });
 
 app.post('/users',(req, res)=>{
-    console.log('aaa: ',res.body)
     new tarefa({
         _name : req.body._name,
         _date : req.body._date,

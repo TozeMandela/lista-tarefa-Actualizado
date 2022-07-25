@@ -17,12 +17,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
+
   client.post('/users', req.body, function(err, request, response, obj) {
     assert.ifError(err);
-    console.log('%d -> %j', res.statusCode, res.headers);
+    console.log('aaaa: %d -> %j', response.statusCode, response.headers);
     console.log('%j', obj);
-    //res.json(req.body);
   });
+
 });
 
 

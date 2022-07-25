@@ -18,22 +18,20 @@ class HttpRequest{
         let dados = {}
 
         ajax.open(method.toUpperCase(), url);
+    
+        ajax.setRequestHeader('Content-Type', 'application/json');
+
+        ajax.send(JSON.stringify(obj));
 
         ajax.onload = evt =>{
-            try {
-                dados = JSON.parse(ajax.responseText)
-            } catch (error) {
-                console.error(e);
-                reject(e)
-            }
-            resolve(dados);
-            
-        }
-            console.log('objecto1: ', obj)
-            ajax.setRequestHeader('Content-type', 'application/json')
-            ajax.send(obj);
-            
-            
+                try {
+                    dados = JSON.parse(ajax.responseText)
+                } catch (error) {
+                    reject(error)
+                }
+                resolve(dados);
+                
+            }          
         })
     }
 }

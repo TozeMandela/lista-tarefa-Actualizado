@@ -48,10 +48,12 @@ class Tarefas{
         let itens = this.isItemtoStorage();
         //this.addId(json)
         itens.push(json);
-        //itens = JSON.stringify(itens);
-        
-        HttpRequest.post('/users', itens[0]);
-        console.log('çççç: ',itens[0]);
+        console.log('verification: ', itens);
+        HttpRequest.post('/users', itens[0]).then((d)=>{
+            console.log('uuuuuu: ',d);
+        }).catch((e)=>{
+            console.log('erro ao cadastrar')
+        });
         
        // localStorage.setItem('intens', );
 
